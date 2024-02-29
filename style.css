@@ -1,0 +1,31 @@
+.custom-scroll::-webkit-scrollbar{
+    width:5px;
+}
+.custom-scroll::-webkit-scrollbar-thumb{
+    background-color: #737373;
+    border-radius: 20px;
+}
+.jsCalendar-title{
+    display: flex;
+    justify-content: space-between;
+}
+.jsCalendar tbody td,
+.jsCalendar thead .jsCalendar-week-days th {
+    width: 40px !important;
+    /* height: 33px !important; */
+    font-size: 14px !important;
+}
+.jsCalendar table{
+    box-shadow: none !important;
+}
+.jsCalendar tbody td.jsCalendar-current {
+    background-color: #EEF5FF !important;
+    color: #0060e6 !important;
+    font-weight: 700 !important;
+}
+.toggle-view{
+    display: flex !important;
+}
+.w-change{
+    width: 1060px !important;
+}

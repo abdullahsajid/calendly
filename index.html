@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendly</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.5/source/jsCalendar.min.css"
+      integrity="sha384-CTBW6RKuDwU/TWFl2qLavDqLuZtBzcGxBXY8WvQ0lShXglO/DsUvGkXza+6QTxs0"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="flex items-center justify-center my-14 w-full transition-all">
+      <div
+        class="grid grid-cols-2 max-sm:grid-cols-1 border w-[800px] h-[550px] transition-all"
+        id="mainContainer"
+      >
+        <div
+          class="flex flex-col overflow-y-scroll p-4 custom-scroll max-sm:h-[500px]"
+        >
+          <div>
+            <img
+              src="https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/32248172/873dc87d.png"
+              class="w-[65px] h-[65px] rounded-[50%]"
+            />
+          </div>
+          <div class="text-[rgba(26,26,26,0.61)] mt-2">Ibrahim Shah</div>
+          <div class="text-[28px] font-bold">Interview Meeting</div>
+          <div class="flex items-center mt-1 gap-2">
+            <i
+              class="fa-regular fa-clock text-[rgba(26,26,26,0.61)] font-bold"
+            ></i>
+            <span class="text-[rgba(26,26,26,0.61)] font-bold">10 min</span>
+          </div>
+          <div class="flex items-center mt-1 gap-2">
+            <i
+              class="fa-solid fa-video text-[rgba(26,26,26,0.61)] font-bold"
+            ></i>
+            <span class="text-[rgba(26,26,26,0.61)] font-bold"
+              >Web conferencing details provided upon confirmation.</span
+            >
+          </div>
+          <div class="flex items-center mt-1 gap-2 hidden" id="viewTiming">
+            <i
+              class="fa-solid fa-calendar-days text-[rgba(26,26,26,0.61)] font-bold"
+            ></i>
+            <span
+              class="text-[rgba(26,26,26,0.61)] font-bold"
+              id="meetingDetails"
+            ></span>
+          </div>
+          <div class="mt-5 font-bold">
+            Kindly schedule your interview for the specified day and time,
+            Please be ready to answer the following questions during the
+            interview.
+          </div>
+          <div class="mt-5 font-bold">
+            Kindly be present at the meeting on selected day or time.
+          </div>
+          <div class="mt-5">
+            <div class="font-bold">Brief Introduction:</div>
+            <div>
+              Briefly introduce yourself and highlight your key qualifications
+              in selected technology.
+            </div>
+          </div>
+          <div class="mt-5">
+            <div class="font-bold">Relevant Experience:</div>
+            <div>What specific experience do you bring to this role?</div>
+          </div>
+          <div class="mt-5">
+            <div class="font-bold">Key Skills:</div>
+            <div>
+              You can mention in interview a few key skills or strengths that
+              you believe make you well-suited for this position.
+            </div>
+          </div>
+          <div class="mt-5">
+            <div class="font-bold">Project Contributions:</div>
+            <div>
+              Could you share a brief example of a project (If You Have) where
+              you made a significant contribution.
+            </div>
+          </div>
+          <div class="mt-5">
+            <div class="font-bold">Internship Benefit:</div>
+            <div>
+              Why you want to join our internship, What excites you most about
+              this role, and how does it align with your career aspirations?
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col p-4 h-full transition-all">
+          <div class="text-[20px] font-bold mt-3">Select a Date & Time</div>
+          <div class="mt-5 flex flex-row justify-center h-full max-sm:flex-col">
+            <div id="my-calendar"></div>
+            <div
+              class="flex flex-col mt-4 hidden transition-all max-sm:h-full max-sm:justify-center max-sm:items-center"
+              id="timerModel"
+            >
+              <div class="setDate"></div>
+              <div
+                class="flex flex-col gap-5 mt-5 w-[150px] parent-btns grow shrink basis-[100px] max-sm:basis-[300px] overflow-auto custom-scroll"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.5/source/jsCalendar.min.js"
+      integrity="sha384-F3Wc9EgweCL3C58eDn9902kdEH6bTDL9iW2JgwQxJYUIeudwhm4Wu9JhTkKJUtIJ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
